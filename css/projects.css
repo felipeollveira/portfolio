@@ -1,0 +1,103 @@
+ /* PORTFOLIO */
+    .portfolio {
+      max-width: 1100px;
+      margin: 10px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.portfolio-item img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.portfolio-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* altura do gradiente */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.724), transparent);
+}
+
+.portfolio-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .portfolio-item h3 {
+        position: absolute;
+        top: 5px;   
+        left: 15px;     
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 500;
+        z-index: 1;
+        margin: 0;
+        }
+
+
+    /* OVERLAY */
+    .portfolio-item .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.75);
+      color: #fff;
+      opacity: 0;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      transition: opacity 0.4s ease;
+    }
+
+    .portfolio-item:hover .overlay {
+      opacity: 1;
+    }
+
+
+    .portfolio-item .overlay p {
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+   .portfolio-item h3 {
+    display: flex;
+    align-items: center;
+}
+
+.portfolio-item h3 i {
+    margin-left: 5px; /* Espaço entre o texto e o ícone */
+    font-size: 1.2em; /* Tamanho do ícone */
+}
+
+
+    .portfolio-item .overlay a {
+      padding: 8px 16px;
+      background: #0073ff;
+      color: #fff;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      z-index: 99;
+      transition: background 0.3s;
+    }
+
+    .portfolio-item .overlay a:hover {
+      background: #0056b3;
+    }

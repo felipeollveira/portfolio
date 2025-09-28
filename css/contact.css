@@ -1,0 +1,37 @@
+ /* CONTATO */
+    .contato {
+      text-align: center;
+      padding: 60px 20px;
+      background: #f9f9f9;
+    }
+
+    .contato h2 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    .social {
+      margin-top: 20px;
+    }
+
+    .social a {
+      margin: 0 10px;
+      font-size: 1.1rem;
+      color: #0073ff;
+      transition: 0.3s;
+    }
+
+    .social a:hover {
+      color: #0056b3;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #fff;
+      border-top: 1px solid #eee;
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #666;
+    }
