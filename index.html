@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Minimalista</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      PERFECT PORTFOLIO
+      <span>Take Your Freelancing Career To Another Level</span>
+    </div>
+    <div class="icons">
+      <div class="icon"></div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="https://picsum.photos/200" alt="Foto de Perfil">
+    <h1>Eu sou <span>[nome]</span></h1>
+    <p>
+   Tive o prazer de trabalhar com pessoas incríveis e grandes empresas, 
+   desenvolvendo novos apps e otimizando produtos existentes. 
+   Confira alguns dos resultados abaixo.
+    </p>
+    <p class="skills">
+        <span>#Code</span>
+        <span>#SoftwareEngineer</span>
+        <span>#AdobePhotoshop</span>
+        <span>#Portfolio</span>
+        <span>#GraphicDesigner</span>
+        <span>#DesignInspiration</span>
+        <span>#MadeWithCode</span>
+        <span>#VideoMaker</span>
+    </p>
+
+    <div class="filters">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="digital">Digital Arts</button>
+      <button data-filter="web">Web Design & Developer</button>
+      <button data-filter="film">Films</button>
+      <button data-filter="dev">Apps & Dev</button>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+ <section class="portfolio">
+
+    <div class="portfolio-item fade" data-category="web">
+      <img src="images/seeucapital.png" alt="Projeto 1">
+      <h3>See U Capital <i class="fab fa-node-js"></i><i class="fab fa-html5"></i></i></h3>
+      <div class="overlay">
+        <p>Plataforma web para gestão de investimentos com dashboard responsivo e visual analítico, 
+            gráficos interativos e controles de aporte para tomada de decisão rápida</p>
+        <a href="https://see-u-capital-one.vercel.app" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
+
+    <div class="portfolio-item fade" data-category="web">
+      <img src="https://picsum.photos/400/200?2" alt="Projeto 2">
+      <h3>Landing Page Startup <i class="fab fa-figma"></i></h3>
+      <div class="overlay">
+        <p>Landing page responsiva para apresentação de uma startup SaaS.</p>
+        <a href="https://meusite.com" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
+
+    <div class="portfolio-item fade" data-category="digital">
+      <img src="https://picsum.photos/400/200?3" alt="Projeto 3">
+      <h3>Digital Artwork <i class="fa-solid fa-photo-film"></i></h3>
+      <div class="overlay">
+        <p>Arte digital ilustrativa criada no Illustrator.</p>
+        <a href="#" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
+
+    <div class="portfolio-item fade" data-category="web">
+      <img src="images/blog.png" alt="Projeto 4">
+      <h3>Blog pessoal <i class="fab fa-node-js"></i> <i class="fab fa-express"></i></h3>
+      <div class="overlay">
+        <p>Site construído em Node.js que consome API de publicações; arquitetura SEO-friendly, 
+            template responsivo, estrutura modular para fácil manutenção.</p>
+        <a href="https://blogview-projects.vercel.app" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
+
+    <div class="portfolio-item fade" data-category="dev">
+      <img src="https://picsum.photos/400/200?7" alt="Projeto 5">
+      <h3>Know Chords 
+        <i class="fab fa-android"></i> 
+    </h3>
+      <div class="overlay">
+        <p>Aplicativo em Flutter para iniciantes em violão no aprendizado de construção de acordes.</p>
+        <a href="" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
+
+    <div class="portfolio-item fade" data-category="dev">
+      <img src="https://picsum.photos/400/200?8" alt="Projeto 6">
+      <h3>AcolheEdu <i class="fab fa-android"></i></h3>
+      <div class="overlay">
+        <p>Aplicativo em Flutter de suporte a estudantes do ensino fundamental e médio, 
+             prioriza acessibilidade e usabilidade em contextos escolares.</p>
+        <a href="" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
+
+    <div class="portfolio-item fade" data-category="dev">
+      <img src="https://picsum.photos/400/200?9" alt="Projeto 7">
+      <h3>Vision Board <i class="fab fa-python"></i></h3>
+      <div class="overlay">
+        <p>Captura de pontos usando OpenCV para realidade aumentada com 
+            marcadores ArUco</p>
+        <a href="" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
+
+</section>
+
+
+  
+
+  <!-- CONTATO -->
+  <section class="contato">
+    <h2>Entre em contato</h2>
+    <p>Interessado em colaborar? Vamos conversar!</p>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/ollveira/" target="_blank">LinkedIn</a>
+      <a href="https://www.github.com/felipeollveira" target="_blank">Github</a>
+      <a href="#">Behance</a>
+      <a href="mailto:felipejesus.oliveira@ucsal.edu.br">Email</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 MeuPortfólio. Todos os direitos reservados.
+  </footer>
+
+  <script>
+   const buttons = document.querySelectorAll(".filters button");
+const items = document.querySelectorAll(".portfolio-item");
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelector(".filters button.active").classList.remove("active");
+    btn.classList.add("active");
+
+    const filter = btn.getAttribute("data-filter");
+    let hasVisible = false;
+
+    items.forEach(item => {
+      if (filter === "all" || item.dataset.category === filter) {
+        item.style.display = "block";
+        hasVisible = true;
+    } else {
+        item.style.display = "none";
+      }
+    });
+
+    if (!hasVisible) {
+      buttons[0].click();
+      alert("d")
+    }
+  });
+});
+
+// Animação ao scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll(".fade").forEach(el => observer.observe(el));
+
+  </script>
+  
+</body>
+</html>
