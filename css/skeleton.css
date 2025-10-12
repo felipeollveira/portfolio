@@ -1,0 +1,92 @@
+/* ==================
+   SKELETON LOADER STYLES
+   ================== */
+
+.skeleton-item {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden; /* Essencial para a animação de brilho funcionar */
+  position: relative; /* Essencial para o pseudo-elemento da animação */
+}
+
+.skeleton-img {
+  width: 100%;
+  padding-top: 56.25%; /* Proporção 16:9 para a imagem */
+  background-color: #e0e0e0;
+}
+
+.skeleton-content {
+  padding: 1rem;
+}
+
+.skeleton-title {
+  width: 70%;
+  height: 24px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.skeleton-text {
+  width: 100%;
+  height: 16px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+}
+
+/* Animação de Brilho (Shimmer Effect) */
+.skeleton-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transform: translateX(-100%);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ==================
+   IMAGE BLUR-UP EFFECT STYLES
+   ================== */
+
+.img-container {
+  width: 100%;
+  /* Cor de fundo que aparece antes da imagem começar a carregar */
+  background-color: #e0e0e0; 
+  overflow: hidden; /* Essencial para esconder as bordas borradas */
+  
+  /* Mantém a proporção 16:9. Ajuste se suas imagens forem diferentes. */
+  aspect-ratio: 16 / 9; 
+  border-radius: 8px 8px 0 0; /* Arredonda os cantos superiores */
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem cubra o contêiner sem distorcer */
+  
+  /* O EFEITO INICIAL */
+  /* Borra a imagem e dá um leve zoom para que as bordas borradas não fiquem visíveis */
+  filter: blur(20px);
+  transform: scale(1.1);
+  
+  /* A TRANSIÇÃO SUAVE */
+  /* Define como a imagem vai voltar ao normal */
+  transition: filter 0.4s ease-out, transform 0.6s ease-out;
+}
+
+/* CLASSE QUE SERÁ ADICIONADA VIA JAVASCRIPT */
+/* Quando a imagem estiver carregada, ela terá essa classe */
+.card-image.loaded {
+  filter: blur(0);
+  transform: scale(1);
+}
