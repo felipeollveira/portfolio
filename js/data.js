@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       const projects = await response.json();
       allProjects = projects;
+
       displayProjects(allProjects);
 
     } catch (error) {
